@@ -14,6 +14,18 @@
         padding-right: 65px;
     }
 
+    &__b-margin-until-medium {
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 800px) {
+
+        &__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+    }
+
+
     @media (min-width: 800px) {
         &__medium-4 {
             float: left;
