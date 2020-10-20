@@ -69,4 +69,18 @@
             width: 63%;
         }
     }
+
+    /* Begin Equal Height Rules */
+    &--equal-height-at-medium {
+
+        @media (min-width: 800px) {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+        
+    }
 }
