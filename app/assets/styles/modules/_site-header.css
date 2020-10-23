@@ -3,13 +3,21 @@
     position: absolute;
     z-index: 2;
     width: 100%;
+    transition: background-color .3s ease-out;
 
-    @mixin (min-width: 800px) {
+    &--expanded {
+        background-color: rgba($mainBlue, .55);
+    }
+
+    @media (min-width: 800px) {
         background-color: rgba($mainBlue, .3);
     }
 
     &__btn-container {
-        float: right;
+
+        @media (min-width: 800px) {
+            float: right;
+        }
     }
 
     &__logo {
@@ -34,6 +42,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
+        z-index: 10;
 
         @media (min-width: 800px) {
             display: none;
@@ -41,14 +50,25 @@
     }
 
     &__menu-content {
-        display: none;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
+        z-index: -10;
+        position: relative;
+        padding-top: 90px;
+        text-align: center;
 
         &--visible {
-            display: block;
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
         }
 
         @media (min-width: 800px) {
-            display: block;
+            padding-top: 0;
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
         }
     }
 }
