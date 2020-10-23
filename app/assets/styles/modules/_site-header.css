@@ -43,6 +43,10 @@
     &__menu-content {
         display: none;
 
+        &--visible {
+            display: block;
+        }
+
         @media (min-width: 800px) {
             display: block;
         }
